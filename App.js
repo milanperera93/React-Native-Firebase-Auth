@@ -7,12 +7,12 @@ import { Container, Content, Header, Form, Input, Item, Button, Label } from 'na
 //Initialize firebase
 //add your configuration
 var config = {
-  apiKey: "AIzaSyCcgVeET9iRBr00KDnJZBn421M_SufCWTA",
-  authDomain: "react-firebase-77977.firebaseapp.com",
-  databaseURL: "https://react-firebase-77977.firebaseio.com",
-  projectId: "react-firebase-77977",
-  storageBucket: "react-firebase-77977. appspot.com",
-  messagingSenderId: "275411035059"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: ""
 };
 firebase.initializeApp(config);
 
@@ -53,7 +53,7 @@ export default class App extends React.Component {
 
   
   async loginWithFacebook(){
-    const { type, token } = await Expo.Facebook.logInWithReadPermissionsAsync('488723911544363',{permissions : ['public_profile']})
+    const { type, token } = await Expo.Facebook.logInWithReadPermissionsAsync('ur app id',{permissions : ['public_profile']})
 
     if(type=='success'){
        const credential = firebase.auth.FacebookAuthProvider.credential(token)
